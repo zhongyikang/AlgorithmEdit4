@@ -55,3 +55,5 @@ put()方法同样是遍历list。 有两种可能性。 1找到了， 那么替�
 
 ## binary search ST (二分查找ST，ordered)
 使用两个并行的array实现， 其中一个存储key， 另外一个存储value。 其中， key-value的顺序取决于key的顺序。
+注意，在BSST中，最重要的一个方法是int rank(Key), put、get、floor、ceil等方法都需要调用这个方法完成自己的功能。
+再者， Key select(int k)， 这个方法的功能是寻找排名为k的键。从1开始。 和rank里面的返回值int对应。 
