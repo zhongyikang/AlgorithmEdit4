@@ -1,10 +1,9 @@
-## Symbol tables (符号表)
+# Symbol tables (符号表)
 
 符号表可以理解为一个键值对list， 每次可以存放key， 之后可以通过key找到list中的value。
 
-# symbol table
 
-## 它的API
+## 无序ST的API
 1. put(key,value)
 2. get(Key) ---返回value
 3. delete(key) ---通过key删除键值对
@@ -16,7 +15,7 @@
 3. 删除操作： 有两种删除， 惰性删除和急切删除。 惰性删除就是直接指定对应key的value为null， 这样通过get方法返回的是null， 会被判定为没有此key。 急切删除就是实在地删除。
 
 
-# equals()方法的规定：
+## equals()方法的规定：
 **Java's convention（惯例） is that equals() must implement an equivalence relation: **
 
 1. Reflexive（反射的）: x.equals(x) is true.
@@ -26,7 +25,7 @@
 equals()方法还带有参数， 特点是：
 1. 不为null
 
-# ordered symbol table
+## ordered symbol table
 因为key提供了Comparable实现，我们可以使用key的排序创建一个ordered sybol table.
 
 ## API
@@ -42,10 +41,7 @@ equals()方法还带有参数， 特点是：
 6. Key的CompareTo()方法和equals()方法应该保持一致。 
 
 
-FrequencyCounter.java 用来
-
-
-# 几种Symbol tables的实现
+## 几种Symbol tables的实现
 
 ## sequential search ST（顺序搜索ST，unordered）
 sequential search ST使用linked list实现。<p>
