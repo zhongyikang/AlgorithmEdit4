@@ -88,7 +88,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * @param capacity the maximum capacity
      */
     public BinarySearchST(int capacity) { 
-        keys = (Key[]) new Comparable[capacity]; 
+        keys = (Key[]) new Comparable[capacity];  //Comparable是一个接口，实现了ComparaTo()方法
         vals = (Value[]) new Object[capacity]; 
     }   
 
@@ -422,6 +422,12 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         for (int i = 0; i < size(); i++)
             if (keys[i].compareTo(select(rank(keys[i]))) != 0) return false;
         return true;
+    }
+    
+    public void printInfo() {
+    	for(int i = 0; i < n; i ++) {
+    		System.out.println(keys[i] + " " + vals[i]);
+    	}
     }
 
 
